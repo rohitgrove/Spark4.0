@@ -8,5 +8,9 @@ public class VariableDemo3 {
         // int $value = 600;
         int pay = 5000;
         // int 9pay = 9000;
+        String StudentName = "Rohit";
+        String course = "java";
+        char ch = 'a';
+        System.out.println(ch);
     }
 }
