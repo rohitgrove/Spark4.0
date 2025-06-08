@@ -1,11 +1,15 @@
 public class ASCIIValues {
     public static void main(String[] args) {
-        for (int i = 'a'; i <= 'z'; i++) {
-            System.out.print(i + " ");
+        System.out.println("Big Alphabets");
+        for (int i = 'A'; i <= 'Z'; i++) {
+            System.out.println(((char) i) + " " + i + " ");
         }
 
-        for (int i = 'A'; i <= 'Z'; i++) {
-            System.out.print(i + " ");
+        System.out.println();
+
+        System.out.println("Small Alphabets");
+        for (int i = 'a'; i <= 'z'; i++) {
+            System.out.println(((char) i) + " " +i + " ");
         }
     }
 }
