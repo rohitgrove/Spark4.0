@@ -1,4 +1,3 @@
-
 class JoinThread extends Thread {
     @Override
     public void run() {
