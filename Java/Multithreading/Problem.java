@@ -30,8 +30,7 @@ class MyThread4 extends Thread {
 
     @Override
     public void run() {
-        for (int i = 1; i <= 1000; i++) // 1->100
-        {
+        for (int i = 1; i <= 1000; i++) { // 1->100
             add.add();
         }
     }
