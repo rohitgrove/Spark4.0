@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main-heading">welcome to CSF</h1>
+    <p class="desc">spark 4.0 java full stack</p>
+    <p class="desc">super 1.0 DevOps</p>
+
+    <div>
+        <h2 id="title">DSA</h2>
+        <p class="desc">DSA course</p>
+    </div>
+
+    <ul class="list">
+        <li>java</li>
+        <li>html</li>
+        <li>js</li>
+    </ul>
+
+    <button id="btn">Click me</button>
+
+    <div id="demo">
+        hello <strong>world</strong>
+    </div>
+
+    <script>
+        const heading = document.getElementById("main-heading");
+        console.log(heading.innerText);
+
+        const para = document.getElementsByClassName("desc");
+        console.log(para.length);
+        console.log(para[0].innerText);
+        console.log(para[1].innerText);
+
+        const button = document.getElementById("btn");
+        console.log(button.innerText);
+
+        // select all list items using tag name
+        const listItem = document.getElementsByTagName("li");
+        for (const items of listItem) {
+            console.log(items.textContent);
+        }
+
+        // query selector
+        const des = document.querySelector(".desc");
+        console.log(des);
+
+        const des1 = document.querySelectorAll(".desc");
+        des1.forEach((p, index) => {
+            console.log(p.innerText);
+        });
+
+        // innerText: gives you only visible text inside the element
+        // innerHTML: gives you enitre html content (includeing nested tags inside and element) - not just text
+
+        const ele = document.getElementById("demo");
+        console.log("innerText: ", ele.innerText);
+        console.log("innerHTML: ", ele.innerHTML);
+
+    </script>
+</body>
+</html>
