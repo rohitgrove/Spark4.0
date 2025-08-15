@@ -17,7 +17,6 @@ class ThreadA extends Thread {
 
     @Override
     public void run() {
-
         synchronized (this) {
             System.out.println("child thread start cal...");
             for (int i = 0; i <= 100; i++) {
