@@ -25,7 +25,7 @@ public class WelcomeServlet extends HttpServlet {
             {
                 if(c.getName().equalsIgnoreCase("user"))
                 {
-                    URLDecoder.decode(c.getValue(), StandardCharsets.UTF_8);
+                    URLDecoder.decode(c.getValue(), StandardCharsets.UTF_8.toString());
                 }
             }
         }
