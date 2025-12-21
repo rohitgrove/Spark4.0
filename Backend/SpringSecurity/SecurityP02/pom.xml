@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cfs</groupId>
-	<artifactId>SecurtiyP02</artifactId>
+	<artifactId>SecurityP02</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SecurtiyP02</name>
+	<name>SecurityP02</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

@@ -1,10 +1,10 @@
-package com.cfs.SecurtiyP02;
+package com.cfs.SecurityP02;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SecurtiyP02ApplicationTests {
+class SecurityP02ApplicationTests {
 
 	@Test
 	void contextLoads() {
