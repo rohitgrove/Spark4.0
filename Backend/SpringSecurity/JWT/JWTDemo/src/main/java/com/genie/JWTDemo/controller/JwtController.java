@@ -25,9 +25,8 @@ public class JwtController {
             return "Invalid credentials";
         }
     }
-
-@GetMapping("/fund")
-   public String fundTranfer(@RequestHeader(value="Authorization",required = false) String authorizationHeader)
+    @GetMapping("/fund")
+    public String fundTranfer(@RequestHeader(value="Authorization",required = false) String authorizationHeader)
     {
         if(authorizationHeader!=null && authorizationHeader.startsWith("Bearer "))
         {
