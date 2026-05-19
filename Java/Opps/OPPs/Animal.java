@@ -1,3 +1,5 @@
+package OPPs;
+
 class Species {
     void fly() {
         System.out.println("flying....");

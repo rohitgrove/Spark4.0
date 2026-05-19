@@ -1,3 +1,5 @@
+package OPPs;
+
 public class Student {
     String name;
     int age;

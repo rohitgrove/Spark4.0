@@ -1,3 +1,5 @@
+package OPPs;
+
 public class Course {
     String name; // defult value = null
     int duration;
