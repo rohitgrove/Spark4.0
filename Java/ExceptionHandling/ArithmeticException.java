@@ -1,4 +1,4 @@
-public class AirthmatitcException{
+public class ArithmeticException{
     public static void main(String[] args) {
             System.out.println("Before exception");
         try {
