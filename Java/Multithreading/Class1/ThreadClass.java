@@ -11,14 +11,14 @@ public class ThreadClass {
         // run() ->
         // getName() ->
         // setName() ->
-        // setPriority()
+        // setPriority() ->
         System.out.println(Thread.currentThread().getName());
         Thread t = Thread.currentThread();
         t.setName("mera thread");
         System.out.println(Thread.currentThread().getName());
 
         MyThread1 t1 = new MyThread1();
-        t1.setName("Child-Thread");
+        t1.setName("Child Thread");
         t1.start();
     }
 }

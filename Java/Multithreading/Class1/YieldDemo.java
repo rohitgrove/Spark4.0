@@ -10,7 +10,7 @@ class YieldThread extends Thread {
 
 public class YieldDemo {
     public static void main(String[] args) {
-        YieldThread t1 = new YieldThread(); // main-5 t1-5 t2-5
+        YieldThread t1 = new YieldThread();
         YieldThread t2 = new YieldThread();
 
         t1.start();

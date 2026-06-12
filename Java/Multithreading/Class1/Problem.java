@@ -9,6 +9,7 @@ class Addition {
 }
 
 class MyThread3 extends Thread {
+
     Addition add;
 
     MyThread3(Addition add) {
@@ -24,6 +25,7 @@ class MyThread3 extends Thread {
 }
 
 class MyThread4 extends Thread {
+
     Addition add;
 
     MyThread4(Addition add) {
@@ -32,7 +34,8 @@ class MyThread4 extends Thread {
 
     @Override
     public void run() {
-        for (int i = 1; i <= 1000; i++) { // 1->100
+        for (int i = 1; i <= 1000; i++) // 1->100
+        {
             add.add();
         }
     }

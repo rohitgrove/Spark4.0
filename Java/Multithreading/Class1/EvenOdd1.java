@@ -16,14 +16,9 @@ class OddThread extends Thread {
     }
 }
 
-public class EvenOdd {
+public class EvenOdd1 {
     public static void main(String[] args) {
         new EvenThread().start();
         new OddThread().start();
-
-        /*
-         * EvenThread e=new EvenThread();
-         * e.start();
-         */
     }
 }

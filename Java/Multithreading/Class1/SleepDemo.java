@@ -4,9 +4,9 @@ class SleepThread extends Thread {
         for (int i = 0; i <= 5; i++) {
             System.out.println(getName() + "---" + i);
             try {
-                Thread.sleep(1000); // 1 sec
-            } catch (InterruptedException e) {
-                System.out.println("Thread intrerrupted");
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                System.out.println("Thread In");
             }
         }
     }
