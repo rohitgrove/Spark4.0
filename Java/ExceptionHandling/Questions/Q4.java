@@ -5,8 +5,7 @@ public class Q4 {
                 int a = 10 / 0;
             } catch (NullPointerException e) {
                 System.out.println("Inner Catch");
-            }
-            catch (ArithmeticException e) {
+            } catch (ArithmeticException e) {
                 System.out.println("inner catch-Arith");
             }
         } catch (Exception e) {
