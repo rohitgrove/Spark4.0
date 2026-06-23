@@ -7,15 +7,14 @@ public class BookingService {
     private List<Ticket> ticketList = new ArrayList<>();
 
     public BookingService() {
-        trainList.add(new Train(101, "Rajdhani Express", "Delhi", "Nagpur", 100));
-        trainList.add(new Train(102, "Shatabdi Express", "Delhi", "Mumbai", 60));
-        trainList.add(new Train(103, "Durunto Express", "Agra", "Delhi", 70));
-        trainList.add(new Train(104, "Vande Bharat Express", "Delhi", "Goa", 100));
-        trainList.add(new Train(105, "Intercity", "Kolkata", "Manali", 90));
-        trainList.add(new Train(106, "Tejas Express", "Delhi", "Bengaluru", 80));
+        trainList.add(new Train(101, "Rajdhani Express","Delhi", "Nagpur", 100));
+        trainList.add(new Train(102, "Shatabdi Express","Delhi", "Mumbai", 60));
+        trainList.add(new Train(103, "Durunto Express","Agra", "Delhi", 70));
+        trainList.add(new Train(104, "vande Bharat Express","Delhi", "Goa", 100));
+        trainList.add(new Train(105, "Intercity","Kolkata", "Manali", 90));
+        trainList.add(new Train(106, "Tejas Express","Delhi", "Bengaluru", 80));
     }
 
-    // date
     public List<Train> searchTrain(String source, String destination) {
         List<Train> res = new ArrayList<>();
         for (Train train : trainList) {
@@ -31,7 +30,7 @@ public class BookingService {
         for (Train train : trainList) {
             if (train.getTrainId() == trainId) {
                 if (train.bookSeats(seatCount)) {
-                    Ticket ticket = new Ticket(user, train, seatCount);
+                    Ticket ticket = new Ticket(train, seatCount, user);
                     ticketList.add(ticket);
                     return ticket;
                 } else {
@@ -40,6 +39,7 @@ public class BookingService {
                 }
             }
         }
+
         System.out.println("Train ID not found");
         return null;
     }
@@ -47,19 +47,20 @@ public class BookingService {
     public List<Ticket> getTicketByUser(User user) {
         List<Ticket> res = new ArrayList<>();
         for (Ticket ticket : ticketList) {
-            if (ticket.getUser().getUsername().equalsIgnoreCase(user.getUsername())) {
+            if (ticket.getUser().getUserName().equalsIgnoreCase(user.getUserName())) {
                 res.add(ticket);
             }
         }
+
         return res;
     }
 
     public boolean cancelTicket(int ticketId, User user) {
         Iterator<Ticket> iterator = ticketList.listIterator();
+
         while (iterator.hasNext()) {
             Ticket ticket = iterator.next();
-            if (ticket.getTicketId() == ticketId &&
-                    ticket.getUser().getUsername().equalsIgnoreCase(user.getUsername())) {
+            if (ticket.getTickerId() == ticketId && ticket.getUser().getUserName().equalsIgnoreCase(user.getUserName())) {
                 Train train = ticket.getTrain();
                 train.cancelSeats(ticket.getSeatBooked());
                 iterator.remove();
@@ -68,12 +69,12 @@ public class BookingService {
             }
         }
 
-        System.out.println("Ticket not found or does not belong to current user");
+        System.out.println("Ticket not found or does not belong to current User");
         return false;
     }
 
     public void listAllTrains() {
-        System.out.println("List of all trains:");
+        System.out.println("List of all Trains: ");
         for (Train train : trainList) {
             System.out.println(train);
         }

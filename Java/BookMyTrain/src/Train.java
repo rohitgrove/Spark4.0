@@ -16,7 +16,7 @@ public class Train {
     }
 
     public int getTrainId() {
-        return this.trainId;
+        return trainId;
     }
 
     public void setTrainId(int trainId) {
@@ -24,7 +24,7 @@ public class Train {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -32,7 +32,7 @@ public class Train {
     }
 
     public String getSource() {
-        return this.source;
+        return source;
     }
 
     public void setSource(String source) {
@@ -40,7 +40,7 @@ public class Train {
     }
 
     public String getDestination() {
-        return this.destination;
+        return destination;
     }
 
     public void setDestination(String destination) {
@@ -48,7 +48,7 @@ public class Train {
     }
 
     public int getTotalSeats() {
-        return this.totalSeats;
+        return totalSeats;
     }
 
     public void setTotalSeats(int totalSeats) {
@@ -56,7 +56,7 @@ public class Train {
     }
 
     public int getAvailableSeats() {
-        return this.availableSeats;
+        return availableSeats;
     }
 
     public void setAvailableSeats(int availableSeats) {

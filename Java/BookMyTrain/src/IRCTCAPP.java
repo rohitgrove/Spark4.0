@@ -7,6 +7,7 @@ public class IRCTCAPP {
     private final BookingService bookingService = new BookingService();
 
     public static void main(String[] args) {
+
         new IRCTCAPP().start();
     }
 
@@ -37,7 +38,7 @@ public class IRCTCAPP {
         String username = scanner.next();
         System.out.print("Enter password: ");
         String password = scanner.next();
-        System.out.print("Enter Full Name: ");
+        System.out.print("Enter Full Name:");
         scanner.nextLine();
         String fullName = scanner.nextLine();
         System.out.print("Enter contact: ");
@@ -74,6 +75,7 @@ public class IRCTCAPP {
                 case 6 -> userService.logOutUser();
                 default -> System.out.println("Invalid Choice.");
             }
+
         }
     }
 
@@ -106,6 +108,7 @@ public class IRCTCAPP {
                 System.out.println("Booking successful!");
                 System.out.println(ticket);
             }
+
         } else {
             System.out.println("Returning to user menu....");
         }

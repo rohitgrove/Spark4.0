@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 public class UserService {
-    // username ----> user
+    // username ---> user
     private HashMap<String, User> userMap = new HashMap<>();
     private User currentUser = null;
 
@@ -16,26 +16,26 @@ public class UserService {
         return true;
     }
 
-    public boolean loginUser(String username, String password) {
-        if (!userMap.containsKey(username)) {
-            System.out.println("No User Found with username");
+    public boolean loginUser(String userName, String password) {
+        if (!userMap.containsKey(userName)) {
+            System.out.println("NO User Found with this username");
             return false;
         }
 
-        User user = userMap.get(username);
+        User user = userMap.get(userName);
         if (!user.getPassword().equals(password)) {
             System.out.println("Incorrect Password.");
             return false;
         }
 
         currentUser = user;
-        System.out.println("Welcome : " + currentUser.getFullname() + "!");
+        System.out.println("welcome : " + currentUser.getFullName() + "!");
         return true;
     }
 
     public void logOutUser() {
         if (currentUser != null) {
-            System.out.println("Logged Out " + currentUser.getFullname());
+            System.out.println("Logged Out " + currentUser.getFullName());
         }
         currentUser = null;
     }
@@ -44,7 +44,7 @@ public class UserService {
         return currentUser;
     }
 
-    public boolean isLoggedIn() {
+    public boolean isLoggedIn () {
         return currentUser != null;
     }
 }
