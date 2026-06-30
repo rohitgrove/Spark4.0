@@ -431,20 +431,3 @@ products.stream()
 7.  Why Optional?
 8.  Why Default Methods?
 9.  Why Java is not a purely Functional language?
-
-------------------------------------------------------------------------
-
-# Next Lecture
-
-**Lecture 2: Lambda Expressions (Deep Dive)**
-
--   Anonymous Class vs Lambda
--   Lambda Syntax
--   Functional Interfaces
--   Variable Capture
--   Effectively Final
--   this keyword
--   Internal Working
--   Bytecode Overview
--   Interview Questions
--   Coding Examples
