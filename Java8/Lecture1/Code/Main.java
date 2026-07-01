@@ -1,3 +1,4 @@
+import FunctionalInterfaceDemo.Calculator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -47,5 +48,8 @@ public class Main {
 
         // Java 8
         employees.sort((a, b) -> a.getSalary() - b.getSalary());
+
+        // Yahan Lambda Calculator interface ka implementation hai.
+        Calculator c = (a,b) -> a+b;
     }
 }

@@ -14,7 +14,6 @@ public class Employee {
     public Employee() {
     }
 
-
     public String getName() {
         return this.name;
     }
