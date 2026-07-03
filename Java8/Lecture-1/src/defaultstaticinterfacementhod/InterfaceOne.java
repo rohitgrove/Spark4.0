@@ -22,4 +22,14 @@ public interface InterfaceOne {
         System.out.println("Inside defaultMethodTwo.. ");
         return "Default Method Two";
     }
+
+    // static method
+    static String staticMethodOne() {
+        System.out.println("This is staticMethodOne");
+        return "This is static method";
+    }
+
+    static void staticMethodTwo() {
+        System.out.println("This is staticMethodTwo");
+    }
 }

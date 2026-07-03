@@ -1,7 +1,6 @@
 package defaultstaticinterfacementhod;
 
-public class ClassOne implements InterfaceOne {
-
+public class ClassFour implements InterfaceOne{
     @Override
     public void printNames() {
         System.out.println("printing Name");
@@ -9,14 +8,7 @@ public class ClassOne implements InterfaceOne {
 
     @Override
     public String getNames() {
-        // Accessing default method from own method
-        defaultMethodOne();
         System.out.println("getting names");
         return "default method";
-    }
-
-    @Override
-    public void defaultMethodOne() {
-        System.out.println("Inside ClassOne Default Method One");
     }
 }

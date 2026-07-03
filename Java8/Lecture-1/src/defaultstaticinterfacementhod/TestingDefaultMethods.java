@@ -16,5 +16,11 @@ public class TestingDefaultMethods {
 
         ClassThree three = new ClassThree();
         three.defaultMethodThree();
+
+        //accessing static methods
+        System.out.println("Accessing static methods");
+        ClassFour four = new ClassFour();
+        InterfaceOne.staticMethodOne();
+        InterfaceOne.staticMethodTwo();
     }
 }
