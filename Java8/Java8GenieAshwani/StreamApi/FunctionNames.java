@@ -23,10 +23,10 @@ public class FunctionNames {
             max()
             anyMatch()
             allMatch()
-            noneMatch()
-            findAny()
-            findFirst()
-            collect()
+            noneMatch() -- if no element matched then it returns true
+            findAny() -- return any match
+            findFirst() -- return 1st match
+            collect() -- collect list, map etc
          */
     }
 }
