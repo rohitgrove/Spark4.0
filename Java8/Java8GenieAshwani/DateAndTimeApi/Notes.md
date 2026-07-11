@@ -493,3 +493,168 @@ Returns:
 - DateTimeFormatter
 - Period
 - Duration
+
+---
+
+# Do All Java 8 Date & Time Methods Return Objects?
+
+**Answer:**
+
+No.
+
+It depends on the method.
+
+Since Java 8 Date & Time classes are **immutable**, methods that modify the date or time **do not change the existing object**. Instead, they create and return a **new object**.
+
+---
+
+## 1. Methods That Return a New Object
+
+These methods return a new object of the same class.
+
+```java
+LocalDate date = LocalDate.of(2026, 7, 11);
+
+LocalDate newDate = date.plusDays(5);
+
+System.out.println(date);
+System.out.println(newDate);
+```
+
+Output
+
+```
+2026-07-11
+2026-07-16
+```
+
+Common methods:
+
+```java
+plusDays()
+minusDays()
+
+plusMonths()
+minusMonths()
+
+plusYears()
+minusYears()
+
+withYear()
+withMonth()
+withDayOfMonth()
+```
+
+These methods **never modify the existing object**.
+
+---
+
+## 2. Getter Methods
+
+Getter methods return values instead of objects.
+
+```java
+LocalDate date = LocalDate.now();
+
+date.getYear();          // int
+
+date.getMonth();         // Month
+
+date.getDayOfMonth();    // int
+
+date.getDayOfWeek();     // DayOfWeek
+
+date.isLeapYear();       // boolean
+```
+
+Return Types
+
+| Method | Return Type |
+|----------|------------|
+| getYear() | int |
+| getMonth() | Month |
+| getDayOfMonth() | int |
+| getDayOfWeek() | DayOfWeek |
+| isLeapYear() | boolean |
+
+---
+
+## 3. Comparison Methods
+
+These methods return **boolean**.
+
+```java
+date1.isBefore(date2);
+
+date1.isAfter(date2);
+
+date1.equals(date2);
+```
+
+Return Type
+
+```java
+boolean
+```
+
+---
+
+## 4. Formatting Method
+
+```java
+String formatted =
+date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+```
+
+Return Type
+
+```java
+String
+```
+
+---
+
+## 5. Parsing Method
+
+```java
+LocalDate date =
+LocalDate.parse("25/12/2026",
+DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+```
+
+Return Type
+
+```java
+LocalDate
+```
+
+---
+
+# Summary
+
+| Method Type | Returns |
+|-------------|---------|
+| plusDays(), minusDays(), plusMonths(), withYear() | New Object |
+| getYear(), getDayOfMonth() | int |
+| getMonth() | Month Enum |
+| getDayOfWeek() | DayOfWeek Enum |
+| isLeapYear() | boolean |
+| isBefore(), isAfter(), equals() | boolean |
+| format() | String |
+| parse() | LocalDate / LocalTime / LocalDateTime |
+
+---
+
+# Interview Question
+
+## Q. Do all Java 8 Date & Time methods return objects?
+
+**Answer:**
+
+No.
+
+- Methods like `plusDays()`, `minusMonths()`, and `withYear()` return a **new object** because the classes are immutable.
+- Getter methods return primitive values or enums.
+- Comparison methods return `boolean`.
+- `format()` returns a `String`.
+- `parse()` returns an object of the corresponding date/time class.
