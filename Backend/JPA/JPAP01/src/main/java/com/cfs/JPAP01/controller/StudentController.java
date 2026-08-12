@@ -45,6 +45,6 @@ public class StudentController {
         Student s = studentRepo.findById(id)
                 .orElseThrow(()->new RuntimeException("Student Not Found"));
         s.setName(name);
-        return s;
+        return studentRepo.save(s);
     }
 }
